@@ -5,13 +5,13 @@ require 'ibm_w3/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "ibm_w3"
-  spec.version       = IbmW3::VERSION
+  spec.version       = IBMW3::VERSION
   spec.authors       = ["Mateus Pinheiro"]
   spec.email         = ["mateus.pinheiro@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = "Connect to IBM's internal W3 and Authenticate"
+  spec.description   = "Provides an LDAP adapter to login to IBM's internal LDAP server"
+  spec.homepage      = "https://github.com/mateusnroll/ibm_w3"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
