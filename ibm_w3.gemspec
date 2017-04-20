@@ -6,8 +6,8 @@ require 'ibm_w3/version'
 Gem::Specification.new do |spec|
   spec.name          = "ibm_w3"
   spec.version       = IBMW3::VERSION
-  spec.authors       = ["Mateus Pinheiro"]
-  spec.email         = ["mateus.pinheiro@gmail.com"]
+  spec.authors       = ["Mateus Pinheiro", "Vinicius Stigliani"]
+  spec.email         = ["mateus.pinheiro@gmail.com", "viniciusstigliani@gmail.com"]
 
   spec.summary       = "Connect to IBM's internal W3 and Authenticate"
   spec.description   = "Provides an LDAP adapter to login to IBM's internal LDAP server"
