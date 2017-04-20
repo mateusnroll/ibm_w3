@@ -12,14 +12,11 @@ module IBMW3
 	    user = find_user_from_email(email)
 
 	    if user.nil?
-	    	puts "Cant find DN"
-	    	return
-	    end
-
-	    if self.authenticated?(user[:dn], password)
-	    	puts "Authenticated"
+	    	return false
+	    elsif self.authenticated?(user[:dn], password)
+	    	return user
 	    else
-	    	puts "Wrong password"
+	    	return false
 	    end
 		end
 
