@@ -29,14 +29,15 @@ module IBMW3
 				email: entry['mail'][0],
 				country: entry['c'][0],
 				shortname: entry['notesshortname'][0],
-				name: entry['cn'][0]
+				name: entry['cn'][0],
+				uid: entry['uid'][0]
 			}
 		end
 
 		def self.find_user_from_email(email)
 			user, found = nil, false
 			filter = "(&(objectclass=ibmPerson)(mail=#{email}))"
-	    searchAttributes = ['dn', 'mail', 'cn', 'c', 'notesshortname']
+	    searchAttributes = ['dn', 'mail', 'cn', 'c', 'notesshortname', 'uid']
 
 	    LDAP::SSLConn.new(@@host, @@port).bind do |conn|
 	    	conn.search(@@base, LDAP::LDAP_SCOPE_SUBTREE, filter, searchAttributes) do |entry|
